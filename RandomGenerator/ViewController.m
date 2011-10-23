@@ -10,17 +10,21 @@
 
 @implementation ViewController
 
-@synthesize resultLabel;
+@synthesize resultLabel,valueLabel;
 
-int i =0;
+int i= 0, myNumber;
+
 
 -(IBAction) generateNumber:(id)sender {
-    i++;
     
-    //NSString *myRandomNumber=[[NSString alloc] initWithFormat:[resultLabel text]];
-    [resultLabel setText:[NSString stringWithFormat:@"Random Number is %d", i]];
-     
-    // NSString *voltage = [[NSString alloc] initWithFormat:[voltageLabel text]];
+    i++;
+    [resultLabel setText:[NSString stringWithFormat:@"Times clicked = %d", i]];
+    
+    //generate random number and display
+    
+    myNumber = (arc4random() % 41) + 1; //range limited from 1 to 42
+    [valueLabel setText:[NSString stringWithFormat:@"Random number = %d", myNumber]];
+    
     
 }
 

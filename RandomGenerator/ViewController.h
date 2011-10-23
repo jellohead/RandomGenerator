@@ -11,9 +11,10 @@
 @interface ViewController : UIViewController {
     
     IBOutlet UILabel *resultLabel;
+    IBOutlet UILabel *valueLabel;
 }
 
-@property (retain, nonatomic) UILabel *resultLabel;
+@property (retain, nonatomic) UILabel *resultLabel, *valueLabel;
 
 -(IBAction)generateNumber:(id)sender;
 
