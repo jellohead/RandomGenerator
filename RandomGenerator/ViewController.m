@@ -10,6 +10,24 @@
 
 @implementation ViewController
 
+@synthesize resultLabel;
+
+int i =0;
+
+-(IBAction) generateNumber:(id)sender {
+    i++;
+    
+    //NSString *myRandomNumber=[[NSString alloc] initWithFormat:[resultLabel text]];
+    [resultLabel setText:[NSString stringWithFormat:@"Random Number is %d", i]];
+     
+    // NSString *voltage = [[NSString alloc] initWithFormat:[voltageLabel text]];
+    
+}
+
+
+
+// added by xcode
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
